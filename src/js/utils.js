@@ -2,7 +2,6 @@ import CardsType from './CardsType';
 
 export function clearMsg() {
   const removeEl = document.getElementById('form').nextElementSibling;
-  console.log(removeEl);
   if (removeEl) {
     removeEl.remove();
   }
