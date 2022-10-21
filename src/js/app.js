@@ -1,8 +1,8 @@
-import CardsType from './CardsType';
+import CardWidget from './CardWidget';
 import LuhnAlgorithm from './LuhnAlgorithm';
 
-const cardsType = new CardsType();
-cardsType.init();
+const cardWidget = new CardWidget(document.documentElement.querySelector('.cards-widget'));
+cardWidget.bindToDOM();
 
-const luhnAlgorithm = new LuhnAlgorithm();
+const luhnAlgorithm = new LuhnAlgorithm(cardWidget);
 luhnAlgorithm.init();
