@@ -8,7 +8,7 @@ describe('Card Form', () => {
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
-      headless: false,
+      // headless: false,
       slowMo: 100,
       // devtools: true,
     });
