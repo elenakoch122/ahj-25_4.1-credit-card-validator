@@ -2,7 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ud64gwivsnxgsmf5?svg=true)](https://ci.appveyor.com/project/elenakoch122/ahj-25-4-1-credit-card-validator)
 
-GitHub Pages: 
+GitHub Pages: https://elenakoch122.github.io/ahj-25_4.1-credit-card-validator/
 
 #### Легенда
 
