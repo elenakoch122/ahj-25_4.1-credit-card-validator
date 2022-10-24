@@ -55,6 +55,7 @@ export default class CardValidator {
     }
 
     if (this.type === null) {
+      [...this.cards].forEach((item) => item.classList.remove('hide'));
       this.type = 'неизвестен';
     }
   }
