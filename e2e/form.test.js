@@ -8,9 +8,9 @@ describe('Card Form', () => {
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
-      // headless: false,
+      headless: true,
       slowMo: 100,
-      // devtools: true,
+      devtools: false,
     });
     page = await browser.newPage();
   });
@@ -20,7 +20,7 @@ describe('Card Form', () => {
     ['.error-msg', 'invalid', '4556765265954621'],
     ['.error-msg', 'invalid', '45567'],
     ['.error-msg', 'invalid', ''],
-  ])('should add "success-msg" class if card number is valid', async (msg, _, cardNumber) => {
+  ])('should add %s class if card number is %s', async (msg, _, cardNumber) => {
     await page.goto('http://localhost:9000', { waitUntil: 'load' });
     await page.waitForSelector('#form');
 
