@@ -51,7 +51,7 @@ export default class CardWidget {
       msg.textContent = `Ошибка! Номер карты неверен!\nТип карты: ${this.cardValidator.showType()}`;
     }
     if (text === 'correct-card') {
-      msg.classList.add('reply');
+      msg.classList.add('success-msg');
       msg.textContent = `Проверка прошла успешно!\nТип карты: ${this.cardValidator.showType()}`;
     }
     this.form.insertAdjacentElement('afterend', msg);

@@ -35,14 +35,6 @@ module.exports = {
         test: /\.svg$/i,
         type: 'asset/resource',
       },
-      // {
-      //   test: /\.(png|jpg|gif)$/i,
-      //   use: [
-      //     {
-      //       loader: 'url-loader',
-      //     },
-      //   ],
-      // },
       {
         test: /\.txt$/i,
         loader: 'raw-loader',
