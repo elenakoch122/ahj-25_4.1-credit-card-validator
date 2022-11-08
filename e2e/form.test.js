@@ -24,26 +24,18 @@ describe('Card Form', () => {
       // slowMo: 100,
       // devtools: false,
     });
-    // page = await browser.newPage();
   });
 
   beforeEach(async () => {
-    // browser = await puppeteer.launch({
-    //   // headless: true,
-    //   // slowMo: 100,
-    //   // devtools: false,
-    // });
     page = await browser.newPage();
   });
 
-  // jest.useFakeTimers('legacy');
   test.each([
     ['.success-msg', 'valid', '4556765265954626'],
     // ['.error-msg', 'invalid', '4556765265954621'],
     // ['.error-msg', 'invalid', '45567'],
     // ['.error-msg', 'invalid', ''],
   ])('should add %s class if card number is %s', async (msg, _, cardNumber) => {
-    // jest.useFakeTimers();
     await page.goto('http://localhost:9000', { waitUntil: 'load' });
     await page.waitForSelector('#form');
 
@@ -58,8 +50,6 @@ describe('Card Form', () => {
   });
 
   afterEach(async () => {
-    // jest.useRealTimers();
-    // await browser.close();
     await page.close();
   });
 

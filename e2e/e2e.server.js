@@ -4,21 +4,11 @@ const config = require('../webpack.dev.config');
 
 const server = new WebpackDevServer({ ...config.devServer }, webpack(config));
 
-// server.listen(9000, 'localhost', (err) => {
-//   if (err) {
-//     return;
-//   }
-//   if (process.send) {
-//     process.send('ok');
-//   }
-// });
-
-// const runServer = async () => {
-//   await server.start();
-// };
-
-// runServer();
-
-(async () => {
-  await server.start();
-})();
+server.listen(9000, 'localhost', (err) => {
+  if (err) {
+    return;
+  }
+  if (process.send) {
+    process.send('ok');
+  }
+});
