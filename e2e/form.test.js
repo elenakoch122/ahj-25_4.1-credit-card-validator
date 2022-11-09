@@ -27,10 +27,6 @@ describe('Card Form', () => {
     page = await browser.newPage();
   });
 
-  // beforeEach(async () => {
-  //   page = await browser.newPage();
-  // });
-
   test.each([
     ['.success-msg', 'valid', '4556765265954626'],
     ['.error-msg', 'invalid', '4556765265954621'],
@@ -49,10 +45,6 @@ describe('Card Form', () => {
 
     await page.waitForSelector(msg);
   });
-
-  // afterEach(async () => {
-  //   await page.close();
-  // });
 
   afterAll(async () => {
     await page.close();
