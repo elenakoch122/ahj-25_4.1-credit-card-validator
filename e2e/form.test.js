@@ -24,17 +24,18 @@ describe('Card Form', () => {
       // slowMo: 100,
       // devtools: false,
     });
-  });
-
-  beforeEach(async () => {
     page = await browser.newPage();
   });
 
+  // beforeEach(async () => {
+  //   page = await browser.newPage();
+  // });
+
   test.each([
     ['.success-msg', 'valid', '4556765265954626'],
-    // ['.error-msg', 'invalid', '4556765265954621'],
-    // ['.error-msg', 'invalid', '45567'],
-    // ['.error-msg', 'invalid', ''],
+    ['.error-msg', 'invalid', '4556765265954621'],
+    ['.error-msg', 'invalid', '45567'],
+    ['.error-msg', 'invalid', ''],
   ])('should add %s class if card number is %s', async (msg, _, cardNumber) => {
     await page.goto('http://localhost:9000', { waitUntil: 'load' });
     await page.waitForSelector('#form');
@@ -49,11 +50,12 @@ describe('Card Form', () => {
     await page.waitForSelector(msg);
   });
 
-  afterEach(async () => {
-    await page.close();
-  });
+  // afterEach(async () => {
+  //   await page.close();
+  // });
 
   afterAll(async () => {
+    await page.close();
     await browser.close();
     server.kill();
   });
