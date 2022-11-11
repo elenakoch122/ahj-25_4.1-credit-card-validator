@@ -1,8 +1,6 @@
 import puppeteer from 'puppeteer';
 import { fork } from 'child_process';
 
-jest.setTimeout(200000);
-
 describe('Card Form', () => {
   let browser;
   let page;
@@ -27,6 +25,7 @@ describe('Card Form', () => {
     page = await browser.newPage();
   });
 
+  jest.setTimeout(200000);
   test.each([
     ['.success-msg', 'valid', '4556765265954626'],
     ['.error-msg', 'invalid', '4556765265954621'],
